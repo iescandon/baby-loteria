@@ -1,9 +1,10 @@
 import Carta from "@/components/carta";
 import { useState, useEffect } from "react";
 import Nav from "@/components/nav";
+import Image from 'next/image';
+import pacifier from "../public/images/pacifier.svg";
 
 export default function Caller() {
-  const [hasLoaded, setHasLoaded] = useState<boolean>(false);
   const [hasStarted, setHasStarted] = useState<boolean>(false);
   const [hasEnded, setHasEnded] = useState<boolean>(false);
   const [cardNum, setCardNum] = useState<number | undefined>(undefined);
@@ -20,7 +21,7 @@ export default function Caller() {
 
   const createAndShuffleDeck = () => {
     let tempDeck: Array<number> = [];
-    for (let i = 1; i < 55; i++) {
+    for (let i = 1; i < 49; i++) {
       tempDeck.push(i);
     }
     for (let i = tempDeck.length - 1; i > 0; i--) {
@@ -59,16 +60,20 @@ export default function Caller() {
     <>
       {!hasStarted ? (
         <>
-          <section className="flex flex-row h-screen md:min-h-screen items-center justify-center p-6">
+          <section className="flex flex-col h-screen md:min-h-screen items-center justify-center p-6">
             <button
-              className="bg-[#e81e25] text-2xl font-lora font-bold px-3 py-2 outline outline-2"
               onClick={() => {
                 const firstNum = shuffledCardsArray[0];
                 setCardNum(firstNum);
                 setHasStarted(true);
               }}
             >
-            START
+              <Image
+                priority
+                src={pacifier}
+                alt="pacifier"
+              />
+              <p className="pt-2 text-3xl font-bold font-josefin text-white">START</p>
             </button>
           </section>
         </>
@@ -86,12 +91,12 @@ export default function Caller() {
               <div className="flex flex-row justify-center items-center pt-3 pb-8">
                 <button
                   id="nextBtn"
-                  className="bg-[#07adee] border border-2 border-black text-3xl w-[50px] h-[40px] rounded-full"
+                  className="bg-[#96e3ff] text-3xl w-[50px] h-[40px] rounded-full"
                   onClick={() => {
                     getNewCard();
                   }}
                 >
-                  <span className="font-[900]">&#8594;</span>
+                  <span className="font-[700]">&#8594;</span>
                 </button>
               </div>
             </>

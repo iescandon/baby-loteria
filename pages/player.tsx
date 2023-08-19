@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Tabla from "@/components/tabla";
 import { generateRandomNumber } from "../utils/index";
 import Image from 'next/image';
-import mexicoFlagIcon from "../public/images/mexico-flag-icon.svg";
+import pacifier from "../public/images/pacifier.svg";
 
 export default function Player() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -25,7 +25,7 @@ export default function Player() {
     let array: Array<number> = [];
 
     while (count < 16) {
-      const num: number = generateRandomNumber(54);
+      const num: number = generateRandomNumber(48);
       if (!array.includes(num)) {
         array.push(num);
         count++;
@@ -61,8 +61,8 @@ export default function Player() {
         <span className="animate-ping">
           <Image
             priority
-            src={mexicoFlagIcon}
-            alt="mexico flag"
+            src={pacifier}
+            alt="pacifier"
           />
         </span>
       </div>

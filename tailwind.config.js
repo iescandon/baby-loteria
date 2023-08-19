@@ -11,8 +11,7 @@ module.exports = {
         starWarsYellow: "#ffe81f",
       },
       fontFamily: {
-        lora: "Lora",
-        wixMadeforDisplay: "Wix Madefor Display"
+        josefin: "Josefin Sans",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
