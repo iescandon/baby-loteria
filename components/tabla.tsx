@@ -9,7 +9,7 @@ export default function Tabla({ isLoading, randomNumberArray }: TablaProps) {
   return (
     <>
       <div
-        className={`flex flex-col drop-shadow-2xl md:py-0 ${
+        className={`flex flex-col md:drop-shadow-2xl md:py-0 ${
           isLoading ? "invisible h-0 w-0 overflow-hidden" : "visible h-full w-full md:w-[460px]"
         }`}
       >
