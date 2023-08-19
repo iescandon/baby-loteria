@@ -68,7 +68,7 @@ export default function Player() {
       </div>
       <section
         className={`flex flex-row w-full md:items-center justify-center md:p-4 ${
-          isLoading ? "h-0" : "md:min-h-screen"
+          isLoading ? "h-0" : "bg-white md:bg-inherit min-h-screen"
         }`}
       >
         <Tabla isLoading={isLoading} randomNumberArray={randomNumberArray} />
