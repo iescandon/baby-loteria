@@ -60,7 +60,7 @@ export default function Caller() {
     <>
       {!hasStarted ? (
         <>
-          <section className="flex flex-col h-screen md:min-h-screen items-center justify-center p-6">
+          <section className="flex flex-col h-dynamic-screen md:min-h-screen items-center justify-center p-6">
             <button
               onClick={() => {
                 const firstNum = shuffledCardsArray[0];

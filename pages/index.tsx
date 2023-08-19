@@ -20,7 +20,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center w-full md:w-1/2 pb-10 md:pb-0">
           <Link className="text-center" href="/caller">
             <img
-              className="h-[250px] md:h-[400px] pb-2"
+              className="h-[250px] md:h-[400px] pb-1 md:pb-2"
               src="/images/caller.png"
               alt="loteria cards fanned out"
             />
@@ -30,7 +30,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center md:w-1/2">
           <Link className="text-center" href="/player">
             <img
-              className="h-[250px] md:h-[400px] pb-2"
+              className="h-[250px] md:h-[400px] pb-1 md:pb-2"
               src="/images/player.png"
               alt="loteria playing card"
             />
